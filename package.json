@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.11.16",
+    "typescript": "^4.9.4"
+  },
+  "name": "42excavator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node ./bin/index.js",
+    "dev": "ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "dha",
+  "license": "ISC",
+  "description": ""
+}
