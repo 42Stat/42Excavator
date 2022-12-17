@@ -3,7 +3,7 @@
     "@types/node": "^18.11.16",
     "typescript": "^4.9.4"
   },
-  "name": "42excavator",
+  "name": "42homi",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
