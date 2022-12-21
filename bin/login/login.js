@@ -37,7 +37,11 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const clientId = process.env.CLIENT_ID || "";
 const secret = process.env.SECRET || "";
+const accessToken = process.env.ACCESS_TOKEN || "";
 let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("aaa");
+    if (accessToken !== "")
+        return accessToken;
     try {
         console.log(`Getting access token...\n${clientId} \n${secret}`);
         const response = yield fetch("https://api.intra.42.fr/oauth/token", {
@@ -55,11 +59,12 @@ let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
             throw new Error(`${response.status} ${response.statusText}}`);
         }
         const data = yield response.json();
+        console.log(data.access_token);
         return data.access_token;
     }
     catch (error) {
         console.error(error);
+        return null;
     }
-    return null;
 });
 exports.getAccessToken = getAccessToken;
