@@ -32,32 +32,34 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getAccessToken = void 0;
 const dotenv = __importStar(require("dotenv"));
-const login_1 = require("./login/login");
 dotenv.config();
-main();
-function main() {
-    return __awaiter(this, void 0, void 0, function* () {
-        let accessToken = (yield (0, login_1.getAccessToken)()) || "";
-        console.log(yield sendApiRequest("/users/cheseo", accessToken));
-    });
-}
-let sendApiRequest = (resource, accessToken) => __awaiter(void 0, void 0, void 0, function* () {
-    const url = "https://api.intra.42.fr/v2";
+const clientId = process.env.CLIENT_ID || "";
+const secret = process.env.SECRET || "";
+let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const response = yield fetch(url + resource, {
-            method: "GET",
+        console.log(`Getting access token...\n${clientId} \n${secret}`);
+        const response = yield fetch("https://api.intra.42.fr/oauth/token", {
+            method: "POST",
             headers: {
-                Authorization: `Bearer ${accessToken}`,
+                "Content-Type": "application/x-www-form-urlencoded",
             },
+            body: new URLSearchParams({
+                grant_type: "client_credentials",
+                client_id: clientId,
+                client_secret: secret,
+            }),
         });
         if (!response.ok) {
             throw new Error(`${response.status} ${response.statusText}}`);
         }
-        return yield response.json();
+        const data = yield response.json();
+        return data.access_token;
     }
     catch (error) {
         console.error(error);
     }
     return null;
 });
+exports.getAccessToken = getAccessToken;
