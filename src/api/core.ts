@@ -1,6 +1,8 @@
 import { getAccessToken, accessToken } from "../login/login";
 
-export let sendApiRequest = async (resource: string): Promise<any> => {
+export let sendApiRequest = async <ReturnType = any>(
+  resource: string
+): Promise<ReturnType | null> => {
   const url = "https://api.intra.42.fr/v2/";
   try {
     const response = await fetch(url + resource, {
@@ -23,3 +25,7 @@ export let sendApiRequest = async (resource: string): Promise<any> => {
   }
   return null;
 };
+
+// 예외처리:
+// 타입 체크
+// 재시도

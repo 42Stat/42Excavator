@@ -37,30 +37,38 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const clientId = process.env.CLIENT_ID;
 const secret = process.env.SECRET;
+const loginUrl = "https://api.intra.42.fr/oauth/token";
 exports.accessToken = "";
 let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const response = yield fetch("https://api.intra.42.fr/oauth/token", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams({
-                grant_type: "client_credentials",
-                client_id: clientId,
-                client_secret: secret,
-            }),
-        });
-        if (!response.ok) {
-            throw new Error(`${response.status} ${response.statusText}}`);
+    // try to get Access Token 3 times
+    for (let i = 0; i < 3; i++) {
+        try {
+            const response = yield fetch(loginUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: new URLSearchParams({
+                    grant_type: "client_credentials",
+                    client_id: clientId,
+                    client_secret: secret,
+                }),
+            });
+            if (!response.ok) {
+                throw new Error(`${response.status} ${response.statusText}}`);
+            }
+            const data = yield response.json();
+            exports.accessToken = data.access_token;
+            // If you got the Access Token successfully, return it.
+            return data.access_token;
         }
-        const data = yield response.json();
-        exports.accessToken = data.access_token;
-        return data.access_token;
+        catch (error) {
+            console.error(error);
+            console.log("try to get Access Token again...");
+            // If you failed to get the Access Token, try again.
+            continue;
+        }
     }
-    catch (error) {
-        console.error(error);
-        return null;
-    }
+    return null;
 });
 exports.getAccessToken = getAccessToken;

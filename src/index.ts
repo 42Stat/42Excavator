@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
-import { sendApiRequest } from "./api/api";
+import { sendApiRequest } from "./api/core";
 import * as readline from "readline";
 
 dotenv.config();
@@ -22,6 +22,16 @@ async function main() {
     }
     data = (await sendApiRequest(line)) ?? "";
     console.log(data);
+    // check file "data.json" exists
+    if (!fs.existsSync("data.json")) {
+      fs.writeFile("data.json", JSON.stringify(data), (err) => {
+        if (err) throw err;
+      });
+    } else {
+      fs.appendFile("data.json", JSON.stringify(data), (err) => {
+        if (err) throw err;
+      });
+    }
     rl.prompt();
   });
   rl.on("close", () => {

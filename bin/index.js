@@ -32,6 +32,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const fs = __importStar(require("fs"));
 const dotenv = __importStar(require("dotenv"));
 const api_1 = require("./api/api");
 const readline = __importStar(require("readline"));
@@ -53,6 +54,21 @@ function main() {
             }
             data = (_a = (yield (0, api_1.sendApiRequest)(line))) !== null && _a !== void 0 ? _a : "";
             console.log(data);
+            // check file "data.json" exists
+            if (!fs.existsSync("data.json")) {
+                fs.writeFile("data.json", JSON.stringify(data), (err) => {
+                    if (err)
+                        throw err;
+                    console.log("The file has been saved!");
+                });
+            }
+            else {
+                fs.appendFile("data.json", JSON.stringify(data), (err) => {
+                    if (err)
+                        throw err;
+                    console.log("The data was appended to file!");
+                });
+            }
             rl.prompt();
         }));
         rl.on("close", () => {
