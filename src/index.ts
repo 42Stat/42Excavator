@@ -1,33 +1,31 @@
 import * as fs from "fs";
 import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
+import { sendApiRequest } from "./api/api";
+import * as readline from "readline";
 
 dotenv.config();
+let data: string = "";
+let rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
 main();
 
 async function main() {
-  let accessToken = (await getAccessToken()) || "";
-  console.log(await sendApiRequest("/users/cheseo", accessToken));
-}
-
-let sendApiRequest = async (
-  resource: string,
-  accessToken: string
-): Promise<any> => {
-  const url = "https://api.intra.42.fr/v2";
-  try {
-    const response = await fetch(url + resource, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}}`);
+  rl.setPrompt("> ");
+  rl.prompt();
+  rl.on("line", async (line) => {
+    if (line === "exit") {
+      rl.close();
     }
-    return await response.json();
-  } catch (error) {
-    console.error(error);
-  }
-  return null;
-};
+    data = (await sendApiRequest(line)) ?? "";
+    console.log(data);
+    rl.prompt();
+  });
+  rl.on("close", () => {
+    console.log("Goodbye!");
+    process.exit(0);
+  });
+}

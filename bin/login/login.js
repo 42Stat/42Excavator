@@ -32,18 +32,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAccessToken = void 0;
+exports.getAccessToken = exports.accessToken = void 0;
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
-const clientId = process.env.CLIENT_ID || "";
-const secret = process.env.SECRET || "";
-const accessToken = process.env.ACCESS_TOKEN || "";
+const clientId = process.env.CLIENT_ID;
+const secret = process.env.SECRET;
+exports.accessToken = "";
 let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log("aaa");
-    if (accessToken !== "")
-        return accessToken;
     try {
-        console.log(`Getting access token...\n${clientId} \n${secret}`);
         const response = yield fetch("https://api.intra.42.fr/oauth/token", {
             method: "POST",
             headers: {
@@ -59,7 +55,7 @@ let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
             throw new Error(`${response.status} ${response.statusText}}`);
         }
         const data = yield response.json();
-        console.log(data.access_token);
+        exports.accessToken = data.access_token;
         return data.access_token;
     }
     catch (error) {

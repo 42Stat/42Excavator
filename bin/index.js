@@ -33,31 +33,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
-const login_1 = require("./login/login");
+const api_1 = require("./api/api");
+const readline = __importStar(require("readline"));
 dotenv.config();
+let data = "";
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        let accessToken = (yield (0, login_1.getAccessToken)()) || "";
-        console.log(yield sendApiRequest("/users/cheseo", accessToken));
+        rl.setPrompt("> ");
+        rl.prompt();
+        rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {
+            var _a;
+            if (line === "exit") {
+                rl.close();
+            }
+            data = (_a = (yield (0, api_1.sendApiRequest)(line))) !== null && _a !== void 0 ? _a : "";
+            console.log(data);
+            rl.prompt();
+        }));
+        rl.on("close", () => {
+            console.log("Goodbye!");
+            process.exit(0);
+        });
     });
 }
-let sendApiRequest = (resource, accessToken) => __awaiter(void 0, void 0, void 0, function* () {
-    const url = "https://api.intra.42.fr/v2";
-    try {
-        const response = yield fetch(url + resource, {
-            method: "GET",
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        });
-        if (!response.ok) {
-            throw new Error(`${response.status} ${response.statusText}}`);
-        }
-        return yield response.json();
-    }
-    catch (error) {
-        console.error(error);
-    }
-    return null;
-});
