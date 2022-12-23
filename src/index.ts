@@ -1,4 +1,6 @@
 import * as fs from "fs";
+import * as fsPromises from "fs/promises";
+import { FileHandle } from "fs/promises";
 import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
 import { sendApiRequest } from "./api/core";
@@ -23,15 +25,19 @@ async function main() {
     data = (await sendApiRequest(line)) ?? "";
     console.log(data);
     // check file "data.json" exists
-    if (!fs.existsSync("data.json")) {
-      fs.writeFile("data.json", JSON.stringify(data), (err) => {
-        if (err) throw err;
-      });
-    } else {
-      fs.appendFile("data.json", JSON.stringify(data), (err) => {
-        if (err) throw err;
-      });
+    if (data === "") {
+      rl.prompt();
+      return;
     }
+    //check file "data.json" exists
+    // and write data to file asynchronusly
+    console.log(fs.existsSync("data.json"));
+
+    let index = 0;
+    while (fs.existsSync(`data/data${index}.json`)) index++;
+
+    await fsPromises.writeFile(`data/data${index}.json`, JSON.stringify(data));
+
     rl.prompt();
   });
   rl.on("close", () => {

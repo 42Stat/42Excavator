@@ -33,8 +33,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
+const fsPromises = __importStar(require("fs/promises"));
 const dotenv = __importStar(require("dotenv"));
-const api_1 = require("./api/api");
+const core_1 = require("./api/core");
 const readline = __importStar(require("readline"));
 dotenv.config();
 let data = "";
@@ -52,23 +53,28 @@ function main() {
             if (line === "exit") {
                 rl.close();
             }
-            data = (_a = (yield (0, api_1.sendApiRequest)(line))) !== null && _a !== void 0 ? _a : "";
+            data = (_a = (yield (0, core_1.sendApiRequest)(line))) !== null && _a !== void 0 ? _a : "";
             console.log(data);
             // check file "data.json" exists
-            if (!fs.existsSync("data.json")) {
-                fs.writeFile("data.json", JSON.stringify(data), (err) => {
-                    if (err)
-                        throw err;
-                    console.log("The file has been saved!");
-                });
+            if (data === "") {
+                rl.prompt();
+                return;
             }
-            else {
-                fs.appendFile("data.json", JSON.stringify(data), (err) => {
-                    if (err)
-                        throw err;
-                    console.log("The data was appended to file!");
-                });
-            }
+            //check file "data.json" exists\
+            // and write data to file asynchronusly
+            console.log(fs.existsSync("data.json"));
+            let index = 0;
+            for (index; fs.existsSync(`data/data${index}.json`); index++) { }
+            yield fsPromises.writeFile(`data/data${index}.json`, JSON.stringify(data));
+            // try {
+            //   if (!fs.existsSync("data.json")) {
+            //     await fsPromises.writeFile("data.json", JSON.stringify(data));
+            //   } else {
+            //     await fsPromises.appendFile("data.json", JSON.stringify(data));
+            //   }
+            // } catch (err) {
+            //   console.error(err);
+            // }
             rl.prompt();
         }));
         rl.on("close", () => {

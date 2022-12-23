@@ -34,6 +34,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAccessToken = exports.accessToken = void 0;
 const dotenv = __importStar(require("dotenv"));
+const process_1 = require("process");
 dotenv.config();
 const clientId = process.env.CLIENT_ID;
 const secret = process.env.SECRET;
@@ -41,6 +42,10 @@ const loginUrl = "https://api.intra.42.fr/oauth/token";
 exports.accessToken = "";
 let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
     // try to get Access Token 3 times
+    if (clientId === undefined || secret === undefined) {
+        console.error("[Error] No clientId or secret");
+        (0, process_1.exit)();
+    }
     for (let i = 0; i < 3; i++) {
         try {
             const response = yield fetch(loginUrl, {
@@ -55,10 +60,11 @@ let getAccessToken = () => __awaiter(void 0, void 0, void 0, function* () {
                 }),
             });
             if (!response.ok) {
-                throw new Error(`${response.status} ${response.statusText}}`);
+                throw new Error(`${response.status} ${response.statusText}`);
             }
             const data = yield response.json();
             exports.accessToken = data.access_token;
+            console.log(`Access token: ${exports.accessToken}`);
             // If you got the Access Token successfully, return it.
             return data.access_token;
         }

@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as dotenv from "dotenv";
+import { exit } from "process";
 
 dotenv.config();
 
@@ -10,6 +11,10 @@ export let accessToken: string = "";
 
 export let getAccessToken = async (): Promise<string | null> => {
   // try to get Access Token 3 times
+  if (clientId === undefined || secret === undefined) {
+    console.error("[Error] No clientId or secret");
+    exit();
+  }
   for (let i = 0; i < 3; i++) {
     try {
       const response = await fetch(loginUrl, {
@@ -24,11 +29,11 @@ export let getAccessToken = async (): Promise<string | null> => {
         }),
       });
       if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}}`);
+        throw new Error(`${response.status} ${response.statusText}`);
       }
       const data = await response.json();
       accessToken = data.access_token;
-
+      console.log(`Access token: ${accessToken}`);
       // If you got the Access Token successfully, return it.
       return data.access_token;
     } catch (error) {
