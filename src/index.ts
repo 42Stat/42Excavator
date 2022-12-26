@@ -5,6 +5,7 @@ import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
 import { sendApiRequest } from "./api/core";
 import * as readline from "readline";
+import { getUser } from "./api/user";
 
 dotenv.config();
 let data: string = "";
@@ -16,30 +17,37 @@ let rl = readline.createInterface({
 main();
 
 async function main() {
-  rl.setPrompt("> ");
-  rl.prompt();
+  console.log(`first: ${await getUser("dha")}`);
   rl.on("line", async (line) => {
-    if (line === "exit") {
-      rl.close();
-    }
-    data = (await sendApiRequest(line)) ?? "";
+    rl.setPrompt("> ");
+    rl.prompt();
+    if (line === "exit") rl.close();
+
+    let inputs: string[] = line.split(" ");
+    let url: string = inputs[0];
+    let type: number = parseInt(inputs[1]);
+    let filename: string = inputs[2];
+
+    data = (await sendApiRequest(url)) ?? "";
     console.log(data);
     // check file "data.json" exists
     if (data === "") {
       rl.prompt();
       return;
     }
-    //check file "data.json" exists
-    // and write data to file asynchronusly
-    console.log(fs.existsSync("data.json"));
 
-    let index = 0;
-    while (fs.existsSync(`data/data${index}.json`)) index++;
-
-    await fsPromises.writeFile(`data/data${index}.json`, JSON.stringify(data));
+    if (fs.existsSync(`data/${filename}.json`)) {
+      await fsPromises.writeFile(`data/${filename}.json`, JSON.stringify(data));
+    } else {
+      await fsPromises.appendFile(
+        `data/${filename}.json`,
+        JSON.stringify(data)
+      );
+    }
 
     rl.prompt();
   });
+
   rl.on("close", () => {
     console.log("Goodbye!");
     process.exit(0);

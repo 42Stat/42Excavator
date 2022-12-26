@@ -1,4 +1,9 @@
 import { getAccessToken, accessToken } from "../login/login";
+import Ajv from "ajv/dist/jtd";
+import { campusUserSchema } from "./interface/campusUser.interface";
+import { userImageSchema } from "./interface/userImage.interface";
+
+export const ajv = new Ajv();
 
 export let sendApiRequest = async (
   resource: string

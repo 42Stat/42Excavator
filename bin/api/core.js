@@ -8,9 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendApiRequest = void 0;
+exports.sendApiRequest = exports.ajv = void 0;
 const login_1 = require("../login/login");
+const jtd_1 = __importDefault(require("ajv/dist/jtd"));
+exports.ajv = new jtd_1.default();
 let sendApiRequest = (resource) => __awaiter(void 0, void 0, void 0, function* () {
     const url = "https://api.intra.42.fr/v2/";
     try {

@@ -37,6 +37,7 @@ const fsPromises = __importStar(require("fs/promises"));
 const dotenv = __importStar(require("dotenv"));
 const core_1 = require("./api/core");
 const readline = __importStar(require("readline"));
+const user_1 = require("./api/user");
 dotenv.config();
 let data = "";
 let rl = readline.createInterface({
@@ -46,35 +47,30 @@ let rl = readline.createInterface({
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        rl.setPrompt("> ");
-        rl.prompt();
+        console.log(`first: ${yield (0, user_1.getUser)("dha")}`);
         rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {
             var _a;
-            if (line === "exit") {
+            rl.setPrompt("> ");
+            rl.prompt();
+            if (line === "exit")
                 rl.close();
-            }
-            data = (_a = (yield (0, core_1.sendApiRequest)(line))) !== null && _a !== void 0 ? _a : "";
+            let inputs = line.split(" ");
+            let url = inputs[0];
+            let type = parseInt(inputs[1]);
+            let filename = inputs[2];
+            data = (_a = (yield (0, core_1.sendApiRequest)(url))) !== null && _a !== void 0 ? _a : "";
             console.log(data);
             // check file "data.json" exists
             if (data === "") {
                 rl.prompt();
                 return;
             }
-            //check file "data.json" exists\
-            // and write data to file asynchronusly
-            console.log(fs.existsSync("data.json"));
-            let index = 0;
-            for (index; fs.existsSync(`data/data${index}.json`); index++) { }
-            yield fsPromises.writeFile(`data/data${index}.json`, JSON.stringify(data));
-            // try {
-            //   if (!fs.existsSync("data.json")) {
-            //     await fsPromises.writeFile("data.json", JSON.stringify(data));
-            //   } else {
-            //     await fsPromises.appendFile("data.json", JSON.stringify(data));
-            //   }
-            // } catch (err) {
-            //   console.error(err);
-            // }
+            if (fs.existsSync(`data/${filename}.json`)) {
+                yield fsPromises.writeFile(`data/${filename}.json`, JSON.stringify(data));
+            }
+            else {
+                yield fsPromises.appendFile(`data/${filename}.json`, JSON.stringify(data));
+            }
             rl.prompt();
         }));
         rl.on("close", () => {
