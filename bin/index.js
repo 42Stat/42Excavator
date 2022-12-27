@@ -47,7 +47,11 @@ let rl = readline.createInterface({
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(`first: ${yield (0, user_1.getUser)("dha")}`);
+        let campusUser = yield (0, user_1.getCampusUser)("dha");
+        if (campusUser !== null) {
+            console.log(campusUser);
+            yield fsPromises.writeFile(`data/${campusUser.login}.json`, JSON.stringify(campusUser));
+        }
         rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {
             var _a;
             rl.setPrompt("> ");
@@ -59,7 +63,7 @@ function main() {
             let type = parseInt(inputs[1]);
             let filename = inputs[2];
             data = (_a = (yield (0, core_1.sendApiRequest)(url))) !== null && _a !== void 0 ? _a : "";
-            console.log(data);
+            // console.log(data);
             // check file "data.json" exists
             if (data === "") {
                 rl.prompt();

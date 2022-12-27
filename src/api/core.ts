@@ -1,7 +1,6 @@
 import { getAccessToken, accessToken } from "../login/login";
-import Ajv from "ajv/dist/jtd";
-import { campusUserSchema } from "./interface/campusUser.interface";
-import { userImageSchema } from "./interface/userImage.interface";
+// import Ajv from "ajv/dist/jtd";
+import Ajv from "ajv";
 
 export const ajv = new Ajv();
 

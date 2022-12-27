@@ -3,18 +3,18 @@ import {
   UserImage,
   UserImageDto,
   userImageSchema,
-} from "./userImage.interface";
+} from "./userimage.interface";
 import { ajv } from "../core";
-import { exit } from "process";
 
-export interface CampusUserDto {
+export interface SimpleUserDto {
   id: number;
   email: string;
   login: string;
   first_name: string;
   last_name: string;
+  displayname: string;
   kind: string;
-  // image: UserImageDto;
+  image: UserImageDto;
   staff?: boolean;
   correction_point: number;
   wallet: number;
@@ -22,14 +22,15 @@ export interface CampusUserDto {
   active?: boolean;
 }
 
-export interface CampusUser {
+export interface SimpleUser {
   id: number;
   email: string;
   login: string;
   firstName: string;
   lastName: string;
+  displayname: string;
   kind: string;
-  // image: UserImage;
+  image: UserImage;
   staff?: boolean;
   correctionPoint: number;
   wallet: number;
@@ -37,8 +38,8 @@ export interface CampusUser {
   active?: boolean;
 }
 
-export const campusUserSchema: JSONSchemaType<CampusUserDto> = {
-  $id: "campusUser",
+export const simpleUserSchema: JSONSchemaType<SimpleUserDto> = {
+  $id: "simpleUser",
   type: "object",
   properties: {
     id: { type: "number" },
@@ -46,15 +47,9 @@ export const campusUserSchema: JSONSchemaType<CampusUserDto> = {
     login: { type: "string" },
     first_name: { type: "string" },
     last_name: { type: "string" },
+    displayname: { type: "string" },
     kind: { type: "string" },
-    // image: {
-    //   type: "object",
-    //   properties: {
-    //     link: { type: "string" },
-    //   },
-    //   required: ["link"],
-    //   additionalProperties: true,
-    // },
+    image: userImageSchema,
     staff: { type: "boolean", nullable: true },
     correction_point: { type: "number" },
     wallet: { type: "number" },
@@ -67,12 +62,13 @@ export const campusUserSchema: JSONSchemaType<CampusUserDto> = {
     "login",
     "first_name",
     "last_name",
+    "displayname",
     "kind",
-    // "image",
+    "image",
     "correction_point",
     "wallet",
   ],
-  // additionalProperties: true,
+  additionalProperties: true,
 };
 
-export const validateCampusUser = ajv.compile(campusUserSchema);
+export const validateSimpleUser = ajv.compile(simpleUserSchema);

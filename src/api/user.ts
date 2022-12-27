@@ -1,19 +1,20 @@
 import { sendApiRequest } from "./core";
 import {
-  CampusUserDto,
+  SimpleUserDto,
   // parseCampusUser,
-  validateCampusUser,
-} from "./interface/campusUser.interface";
+  validateSimpleUser,
+} from "./interface/simple-user.interface";
 
-export let getUser = async (
+export let getCampusUser = async (
   login: string
-): Promise<CampusUserDto | null | undefined | string> => {
-  let data: string | null = await sendApiRequest(`users/${login}`);
-  if (data === null) return null;
-  if (validateCampusUser(data)) {
-    return data;
+): Promise<SimpleUserDto | null> => {
+  let data: string = (await sendApiRequest(`users/${login}`)) ?? "";
+  if (data === "") return null;
+  // console.log(data);
+  if (validateSimpleUser(data)) {
+    let user: SimpleUserDto = data;
+    return user;
   } else {
     return null;
   }
-  return data;
 };

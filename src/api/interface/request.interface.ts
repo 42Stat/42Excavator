@@ -1,6 +1,4 @@
 export interface Request {
   resource: string;
-  query?: Query;
+  // query?: Query;
 }
-
-export interface Query {}

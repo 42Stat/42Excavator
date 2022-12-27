@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
 import { sendApiRequest } from "./api/core";
 import * as readline from "readline";
-import { getUser } from "./api/user";
+import { getCampusUser } from "./api/user";
 
 dotenv.config();
 let data: string = "";
@@ -17,7 +17,14 @@ let rl = readline.createInterface({
 main();
 
 async function main() {
-  console.log(`first: ${await getUser("dha")}`);
+  let campusUser = await getCampusUser("dha");
+  if (campusUser !== null) {
+    console.log(campusUser);
+    await fsPromises.writeFile(
+      `data/${campusUser.login}.json`,
+      JSON.stringify(campusUser)
+    );
+  }
   rl.on("line", async (line) => {
     rl.setPrompt("> ");
     rl.prompt();
@@ -29,7 +36,7 @@ async function main() {
     let filename: string = inputs[2];
 
     data = (await sendApiRequest(url)) ?? "";
-    console.log(data);
+    // console.log(data);
     // check file "data.json" exists
     if (data === "") {
       rl.prompt();

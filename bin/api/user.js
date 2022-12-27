@@ -9,19 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUser = void 0;
+exports.getCampusUser = void 0;
 const core_1 = require("./core");
-const campusUser_interface_1 = require("./interface/campusUser.interface");
-let getUser = (login) => __awaiter(void 0, void 0, void 0, function* () {
-    let data = yield (0, core_1.sendApiRequest)(`users/${login}`);
-    if (data === null)
+const simple_user_interface_1 = require("./interface/simple-user.interface");
+let getCampusUser = (login) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
+    let data = (_a = (yield (0, core_1.sendApiRequest)(`users/${login}`))) !== null && _a !== void 0 ? _a : "";
+    if (data === "")
         return null;
-    if ((0, campusUser_interface_1.validateCampusUser)(data)) {
-        return data;
+    // console.log(data);
+    if ((0, simple_user_interface_1.validateSimpleUser)(data)) {
+        let user = data;
+        return user;
     }
     else {
         return null;
     }
-    return data;
 });
-exports.getUser = getUser;
+exports.getCampusUser = getCampusUser;

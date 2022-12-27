@@ -14,8 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sendApiRequest = exports.ajv = void 0;
 const login_1 = require("../login/login");
-const jtd_1 = __importDefault(require("ajv/dist/jtd"));
-exports.ajv = new jtd_1.default();
+// import Ajv from "ajv/dist/jtd";
+const ajv_1 = __importDefault(require("ajv"));
+exports.ajv = new ajv_1.default();
 let sendApiRequest = (resource) => __awaiter(void 0, void 0, void 0, function* () {
     const url = "https://api.intra.42.fr/v2/";
     try {
