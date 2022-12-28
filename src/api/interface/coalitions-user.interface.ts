@@ -27,7 +27,7 @@ const coalitionUserSchema: JSONSchemaType<CoalitionUserDto> = {
     updated_at: { type: "string" },
   },
   required: ["id", "coalition_id", "user_id", "created_at", "updated_at"],
-  additionalProperties: false,
+  additionalProperties: true,
 };
 
 export const validateCoalitionUser = ajv.compile(coalitionUserSchema);

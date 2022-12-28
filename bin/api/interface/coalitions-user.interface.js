@@ -12,6 +12,6 @@ const coalitionUserSchema = {
         updated_at: { type: "string" },
     },
     required: ["id", "coalition_id", "user_id", "created_at", "updated_at"],
-    additionalProperties: false,
+    additionalProperties: true,
 };
 exports.validateCoalitionUser = core_1.ajv.compile(coalitionUserSchema);

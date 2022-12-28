@@ -17,12 +17,13 @@ const getCampusUser = (login) => __awaiter(void 0, void 0, void 0, function* () 
     const data = (_a = (yield (0, core_1.sendApiRequest)(`users/${login}`))) !== null && _a !== void 0 ? _a : "";
     if (data === "")
         return null;
-    console.log("----");
     if ((0, user_interface_1.validateUser)(data)) {
         const user = data;
+        console.log("succeed");
         return user;
     }
     else {
+        console.log(user_interface_1.validateUser.errors);
         return null;
     }
 });

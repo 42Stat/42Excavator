@@ -36,6 +36,7 @@ let sendApiRequest = (resource) => __awaiter(void 0, void 0, void 0, function* (
             else
                 throw new Error(`${response.status} ${response.statusText}`);
         }
+        console.log(`Request: ${resource} has done.`);
         return yield response.json();
     }
     catch (error) {

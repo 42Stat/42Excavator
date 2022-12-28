@@ -25,8 +25,8 @@ export let sendApiRequest = async (
     return await response.json();
   } catch (error) {
     console.error(error);
+    return null;
   }
-  return null;
 };
 
 // 예외처리:

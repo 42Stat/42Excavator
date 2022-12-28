@@ -4,18 +4,17 @@ import {
   // parseCampusUser,
   validateSimpleUser,
 } from "./interface/simple-user.interface";
-import { validateUser } from "./interface/user.interface";
+import { validateUser, UserDto } from "./interface/user.interface";
 
-export const getCampusUser = async (
-  login: string
-): Promise<SimpleUserDto | null> => {
+export const getCampusUser = async (login: string): Promise<UserDto | null> => {
   const data: string = (await sendApiRequest(`users/${login}`)) ?? "";
   if (data === "") return null;
-  console.log("----");
   if (validateUser(data)) {
-    const user: SimpleUserDto = data;
+    const user: UserDto = data;
+    console.log("succeed");
     return user;
   } else {
+    console.log(validateUser.errors);
     return null;
   }
 };

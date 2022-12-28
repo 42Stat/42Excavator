@@ -47,14 +47,13 @@ let rl = readline.createInterface({
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        let campusUser = yield (0, user_1.getCampusUser)("dha");
+        let campusUser = yield (0, user_1.getCampusUser)("139424");
         if (campusUser !== null) {
-            console.log("failed");
-            yield fsPromises.writeFile(`data/${campusUser.login}.json`, JSON.stringify(campusUser));
+            fsPromises.writeFile(`data/${campusUser.login}.json`, JSON.stringify(campusUser));
         }
+        rl.setPrompt("> ");
         rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {
             var _a;
-            rl.setPrompt("> ");
             rl.prompt();
             if (line === "exit")
                 rl.close();

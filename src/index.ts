@@ -17,16 +17,15 @@ let rl = readline.createInterface({
 main();
 
 async function main() {
-  let campusUser = await getCampusUser("dha");
+  let campusUser = await getCampusUser("139424");
   if (campusUser !== null) {
-    console.log("failed");
-    await fsPromises.writeFile(
+    fsPromises.writeFile(
       `data/${campusUser.login}.json`,
       JSON.stringify(campusUser)
     );
   }
+  rl.setPrompt("> ");
   rl.on("line", async (line) => {
-    rl.setPrompt("> ");
     rl.prompt();
     if (line === "exit") rl.close();
 
