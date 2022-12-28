@@ -49,7 +49,7 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         let campusUser = yield (0, user_1.getCampusUser)("dha");
         if (campusUser !== null) {
-            console.log(campusUser);
+            console.log("failed");
             yield fsPromises.writeFile(`data/${campusUser.login}.json`, JSON.stringify(campusUser));
         }
         rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {

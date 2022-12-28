@@ -19,7 +19,7 @@ main();
 async function main() {
   let campusUser = await getCampusUser("dha");
   if (campusUser !== null) {
-    console.log(campusUser);
+    console.log("failed");
     await fsPromises.writeFile(
       `data/${campusUser.login}.json`,
       JSON.stringify(campusUser)

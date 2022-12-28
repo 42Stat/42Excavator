@@ -1,6 +1,7 @@
 import { JSONSchemaType } from "ajv";
 import { SimpleUserDto, simpleUserSchema } from "./simple-user.interface";
 import { UserImageDto, userImageSchema } from "./userimage.interface";
+import { ajv } from "../core";
 
 export interface UserDto {
   id: number;
@@ -279,3 +280,5 @@ export const userSchema: JSONSchemaType<UserDto> = {
   ],
   additionalProperties: false,
 };
+
+export const validateUser = ajv.compile(userSchema);

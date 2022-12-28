@@ -11,15 +11,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCampusUser = void 0;
 const core_1 = require("./core");
-const simple_user_interface_1 = require("./interface/simple-user.interface");
-let getCampusUser = (login) => __awaiter(void 0, void 0, void 0, function* () {
+const user_interface_1 = require("./interface/user.interface");
+const getCampusUser = (login) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
-    let data = (_a = (yield (0, core_1.sendApiRequest)(`users/${login}`))) !== null && _a !== void 0 ? _a : "";
+    const data = (_a = (yield (0, core_1.sendApiRequest)(`users/${login}`))) !== null && _a !== void 0 ? _a : "";
     if (data === "")
         return null;
-    // console.log(data);
-    if ((0, simple_user_interface_1.validateSimpleUser)(data)) {
-        let user = data;
+    console.log("----");
+    if ((0, user_interface_1.validateUser)(data)) {
+        const user = data;
         return user;
     }
     else {
