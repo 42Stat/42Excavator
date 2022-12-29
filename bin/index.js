@@ -32,14 +32,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = __importStar(require("fs"));
-const fsPromises = __importStar(require("fs/promises"));
+exports.logger = void 0;
 const dotenv = __importStar(require("dotenv"));
+const login_1 = require("./login/login");
 const core_1 = require("./api/core");
 const readline = __importStar(require("readline"));
-const user_1 = require("./api/user");
+const winston = __importStar(require("winston"));
+// winston error level logger include timestamp
+exports.logger = winston.createLogger({
+    format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
+    transports: [
+        new winston.transports.File({
+            filename: "info.log",
+            level: "info",
+        }),
+        new winston.transports.File({
+            filename: "error.log",
+            level: "error",
+        }),
+        new winston.transports.File({
+            filename: "combined.log",
+        }),
+    ],
+});
 dotenv.config();
-let data = "";
+let data;
 let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -47,34 +64,29 @@ let rl = readline.createInterface({
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        let campusUser = yield (0, user_1.getCampusUser)("139424");
-        if (campusUser !== null) {
-            fsPromises.writeFile(`data/${campusUser.login}.json`, JSON.stringify(campusUser));
-        }
-        rl.setPrompt("> ");
+        rl.setPrompt("Homi > ");
+        yield (0, login_1.getAccessToken)();
+        console.log("42Homi's ready :)");
         rl.on("line", (line) => __awaiter(this, void 0, void 0, function* () {
-            var _a;
             rl.prompt();
             if (line === "exit")
                 rl.close();
-            let inputs = line.split(" ");
-            let url = inputs[0];
-            let type = parseInt(inputs[1]);
-            let filename = inputs[2];
-            data = (_a = (yield (0, core_1.sendApiRequest)(url))) !== null && _a !== void 0 ? _a : "";
-            // console.log(data);
-            // check file "data.json" exists
-            if (data === "") {
-                rl.prompt();
-                return;
+            const inputs = line.split(" ");
+            const url = inputs[0];
+            const type = inputs[1] ? parseInt(inputs[1]) : 0;
+            const filename = inputs[2] ? inputs[2] : "unnamed";
+            const page = inputs[3] ? parseInt(inputs[3]) : 1;
+            try {
+                if (type === 0) {
+                    data = yield (0, core_1.getData)(url, filename);
+                }
+                else if (type === 1) {
+                    data = yield (0, core_1.getDataLoop)(url, filename, page);
+                }
             }
-            if (fs.existsSync(`data/${filename}.json`)) {
-                yield fsPromises.writeFile(`data/${filename}.json`, JSON.stringify(data));
+            catch (error) {
+                exports.logger.log("error", `index.ts error ${error}`);
             }
-            else {
-                yield fsPromises.appendFile(`data/${filename}.json`, JSON.stringify(data));
-            }
-            rl.prompt();
         }));
         rl.on("close", () => {
             console.log("Goodbye!");

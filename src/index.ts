@@ -3,12 +3,34 @@ import * as fsPromises from "fs/promises";
 import { FileHandle } from "fs/promises";
 import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
-import { sendApiRequest } from "./api/core";
+import { getData, getDataLoop, sendApiRequest } from "./api/core";
 import * as readline from "readline";
 import { getCampusUser } from "./api/user";
+import * as winston from "winston";
+
+// winston error level logger include timestamp
+export const logger = winston.createLogger({
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.File({
+      filename: "info.log",
+      level: "info",
+    }),
+    new winston.transports.File({
+      filename: "error.log",
+      level: "error",
+    }),
+    new winston.transports.File({
+      filename: "combined.log",
+    }),
+  ],
+});
 
 dotenv.config();
-let data: string = "";
+let data: any;
 let rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -17,41 +39,28 @@ let rl = readline.createInterface({
 main();
 
 async function main() {
-  let campusUser = await getCampusUser("139424");
-  if (campusUser !== null) {
-    fsPromises.writeFile(
-      `data/${campusUser.login}.json`,
-      JSON.stringify(campusUser)
-    );
-  }
-  rl.setPrompt("> ");
+  rl.setPrompt("Homi > ");
+  await getAccessToken();
+  console.log("42Homi's ready :)");
   rl.on("line", async (line) => {
     rl.prompt();
     if (line === "exit") rl.close();
 
-    let inputs: string[] = line.split(" ");
-    let url: string = inputs[0];
-    let type: number = parseInt(inputs[1]);
-    let filename: string = inputs[2];
+    const inputs: string[] = line.split(" ");
+    const url: string = inputs[0];
+    const type: number = inputs[1] ? parseInt(inputs[1]) : 0;
+    const filename: string = inputs[2] ? inputs[2] : "unnamed";
+    const page: number = inputs[3] ? parseInt(inputs[3]) : 1;
 
-    data = (await sendApiRequest(url)) ?? "";
-    // console.log(data);
-    // check file "data.json" exists
-    if (data === "") {
-      rl.prompt();
-      return;
+    try {
+      if (type === 0) {
+        data = await getData(url, filename);
+      } else if (type === 1) {
+        data = await getDataLoop(url, filename, page);
+      }
+    } catch (error) {
+      logger.log("error", `index.ts error ${error}`);
     }
-
-    if (fs.existsSync(`data/${filename}.json`)) {
-      await fsPromises.writeFile(`data/${filename}.json`, JSON.stringify(data));
-    } else {
-      await fsPromises.appendFile(
-        `data/${filename}.json`,
-        JSON.stringify(data)
-      );
-    }
-
-    rl.prompt();
   });
 
   rl.on("close", () => {
