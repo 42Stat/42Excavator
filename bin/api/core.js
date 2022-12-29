@@ -140,14 +140,13 @@ const getData = (resource, filename) => __awaiter(void 0, void 0, void 0, functi
 });
 exports.getData = getData;
 const INTERVAL = 510;
-const EACH_TRY = 10;
+const EACH_TRY = 3;
 const getMultipleData = (resource, elements) => __awaiter(void 0, void 0, void 0, function* () {
     const len = elements.length;
     let tryCount = 0;
     let errorElements = [];
     let multipleData = [];
-    console.log("Start");
-    // const interval = setInterval(async () => {
+    console.log("Start at: " + Date.now());
     while (true) {
         console.log(Date.now());
         let element = elements.length !== 0 ? elements.shift() : errorElements.shift();
@@ -160,8 +159,8 @@ const getMultipleData = (resource, elements) => __awaiter(void 0, void 0, void 0
                 }
                 else {
                     validate(resource, data);
-                    multipleData.push(data);
                 }
+                multipleData.push(data);
             }
             catch (error) {
                 index_1.logger.log("error", error);
@@ -176,33 +175,36 @@ const getMultipleData = (resource, elements) => __awaiter(void 0, void 0, void 0
         }
         yield delay(INTERVAL);
     }
-    console.log("Finished2");
+    console.log("End at: " + Date.now());
     return multipleData;
 });
 exports.getMultipleData = getMultipleData;
 const PAGESIZE = 100;
 const getDataLoop = (resource, filename, page = 1) => __awaiter(void 0, void 0, void 0, function* () {
-    // call getMultipleData until it returns array include empty array
-    let tryCount = 0;
+    let callCount = 0;
     let data;
-    let elements = Array.from({ length: EACH_TRY }, (_, i) => {
-        return String(i + page);
-    });
-    // while (true) {
-    tryCount++;
-    console.log(tryCount);
-    try {
-        // logger.log("info", elements);
-        data = yield (0, exports.getMultipleData)(resource + `?page[size]=${PAGESIZE}?page[number]=`, elements);
-        console.log(typeof data);
-        if (data && data.length !== 0)
-            yield saveData(data, filename + tryCount);
+    while (true) {
+        const elements = Array.from({ length: EACH_TRY }, (_, i) => {
+            return String(i + page + callCount * EACH_TRY);
+        });
+        console.log(elements);
+        callCount++;
+        console.log(callCount);
+        try {
+            data = yield (0, exports.getMultipleData)(resource + `?page[size]=${PAGESIZE}&page[number]=`, elements);
+            if (data && data.length !== 0)
+                yield saveData(data, filename + callCount);
+        }
+        catch (error) {
+            throw new Error(`getDataLoop: ${error}`);
+        }
+        // data is 2d array and if it has empty array, it means there is no more data
+        if (data instanceof Array &&
+            data.filter((array) => array.length === 0).length !== 0) {
+            console.log("break");
+            break;
+        }
+        // if (data instanceof Array && data.filter break;
     }
-    catch (error) {
-        throw new Error(`getDataLoop: ${error}`);
-    }
-    // if (data instanceof Array && data.includes([])) break;
-    elements = elements.map((value) => String(Number(value) + EACH_TRY));
-    // }
 });
 exports.getDataLoop = getDataLoop;

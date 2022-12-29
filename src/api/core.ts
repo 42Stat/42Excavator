@@ -109,7 +109,7 @@ export const getData = async (
 };
 
 const INTERVAL = 510;
-const EACH_TRY = 10;
+const EACH_TRY = 3;
 
 export const getMultipleData = async (
   resource: string,
@@ -120,8 +120,7 @@ export const getMultipleData = async (
   let errorElements: string[] = [];
   let multipleData: any[] = [];
 
-  console.log("Start");
-  // const interval = setInterval(async () => {
+  console.log("Start at: " + Date.now());
   while (true) {
     console.log(Date.now());
     let element =
@@ -134,8 +133,8 @@ export const getMultipleData = async (
           elements = [];
         } else {
           validate(resource, data);
-          multipleData.push(data);
         }
+        multipleData.push(data);
       } catch (error) {
         logger.log("error", error);
         errorElements.push(element);
@@ -147,7 +146,7 @@ export const getMultipleData = async (
     }
     await delay(INTERVAL);
   }
-  console.log("Finished2");
+  console.log("End at: " + Date.now());
   return multipleData;
 };
 
@@ -158,27 +157,33 @@ export const getDataLoop = async (
   filename: string,
   page: number = 1
 ) => {
-  // call getMultipleData until it returns array include empty array
-  let tryCount = 0;
+  let callCount = 0;
   let data: any | any[] | null;
-  let elements = Array.from({ length: EACH_TRY }, (_, i) => {
-    return String(i + page);
-  });
-  // while (true) {
-  tryCount++;
-  console.log(tryCount);
-  try {
-    // logger.log("info", elements);
-    data = await getMultipleData(
-      resource + `?page[size]=${PAGESIZE}?page[number]=`,
-      elements
-    );
-    console.log(typeof data);
-    if (data && data.length !== 0) await saveData(data, filename + tryCount);
-  } catch (error) {
-    throw new Error(`getDataLoop: ${error}`);
+  while (true) {
+    const elements = Array.from({ length: EACH_TRY }, (_, i) => {
+      return String(i + page + callCount * EACH_TRY);
+    });
+    console.log(elements);
+    callCount++;
+    console.log(callCount);
+    try {
+      data = await getMultipleData(
+        resource + `?page[size]=${PAGESIZE}&page[number]=`,
+        elements
+      );
+      if (data && data.length !== 0) await saveData(data, filename + callCount);
+    } catch (error) {
+      throw new Error(`getDataLoop: ${error}`);
+    }
+    // data is 2d array and if it has empty array, it means there is no more data
+    if (
+      data instanceof Array &&
+      data.filter((array) => array.length === 0).length !== 0
+    ) {
+      console.log("break");
+      break;
+    }
+
+    // if (data instanceof Array && data.filter break;
   }
-  // if (data instanceof Array && data.includes([])) break;
-  elements = elements.map((value) => String(Number(value) + EACH_TRY));
-  // }
 };
