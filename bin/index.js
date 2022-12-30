@@ -37,6 +37,7 @@ const dotenv = __importStar(require("dotenv"));
 const login_1 = require("./login/login");
 const core_1 = require("./api/core");
 const readline = __importStar(require("readline"));
+const user_1 = require("./api/user");
 const winston = __importStar(require("winston"));
 // winston error level logger include timestamp
 exports.logger = winston.createLogger({
@@ -64,6 +65,7 @@ let rl = readline.createInterface({
 main();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
+        (0, user_1.getAllUsers)();
         rl.setPrompt("Homi > ");
         yield (0, login_1.getAccessToken)();
         console.log("42Homi's ready :)");

@@ -6,6 +6,7 @@ import { validateCoalitionUser } from "./interface/coalitions-user.interface";
 import { logger } from "../index";
 import * as fs from "fs";
 import * as fsPromises from "fs/promises";
+import { saveDataToFile } from "./file";
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
@@ -64,25 +65,6 @@ const validate = (resource: string, data: any) => {
   }
 };
 
-const saveData = async (data: any, filename: string) => {
-  try {
-    if (fs.existsSync(`data/${filename}.json`)) {
-      let index = 1;
-      while (fs.existsSync(`data/${filename}(${index}).json`)) index++;
-
-      fsPromises.writeFile(
-        `data/${filename}(${index}).json`,
-        JSON.stringify(data)
-      );
-    } else {
-      fsPromises.writeFile(`data/${filename}.json`, JSON.stringify(data));
-    }
-  } catch (error) {
-    logger.log("error", `Failed to save data to ${filename}\n${error}`);
-    throw new Error(`Failed to save data to ${filename}`);
-  }
-};
-
 const MAX_RETRY = 5;
 
 export const getData = async (
@@ -95,7 +77,7 @@ export const getData = async (
     try {
       data = await sendApiRequest(resource);
       validate(resource, data);
-      await saveData(data, filename);
+      await saveDataToFile(data, filename);
 
       console.log(`Saved data to ${filename}.json successfully`);
       return data;
@@ -108,8 +90,8 @@ export const getData = async (
   throw new Error(`Failed to get data from ${resource}`);
 };
 
-const INTERVAL = 510;
-const EACH_TRY = 3;
+const INTERVAL_LIMIT = 510;
+const EACH_TRY = 10;
 
 export const getMultipleData = async (
   resource: string,
@@ -122,7 +104,7 @@ export const getMultipleData = async (
 
   console.log("Start at: " + Date.now());
   while (true) {
-    console.log(Date.now());
+    const startAt = Date.now();
     let element =
       elements.length !== 0 ? elements.shift() : errorElements.shift();
     tryCount++;
@@ -144,7 +126,9 @@ export const getMultipleData = async (
     } else if (tryCount === len + EACH_TRY) {
       throw new Error(`Failed to get data from ${elements} of ${resource}`);
     }
-    await delay(INTERVAL);
+    const interval = Date.now() - startAt;
+    if (interval < INTERVAL_LIMIT)
+      await delay(INTERVAL_LIMIT - interval);
   }
   console.log("End at: " + Date.now());
   return multipleData;
@@ -171,11 +155,10 @@ export const getDataLoop = async (
         resource + `?page[size]=${PAGESIZE}&page[number]=`,
         elements
       );
-      if (data && data.length !== 0) await saveData(data, filename + callCount);
+      if (data && data.length !== 0) await saveDataToFile(data, filename + callCount);
     } catch (error) {
       throw new Error(`getDataLoop: ${error}`);
     }
-    // data is 2d array and if it has empty array, it means there is no more data
     if (
       data instanceof Array &&
       data.filter((array) => array.length === 0).length !== 0
@@ -183,7 +166,11 @@ export const getDataLoop = async (
       console.log("break");
       break;
     }
-
-    // if (data instanceof Array && data.filter break;
   }
 };
+
+// export const getDataLoopWithData = async (
+//   resource: string,
+//   filename: string,
+//   requests: string[]
+// ) => {}

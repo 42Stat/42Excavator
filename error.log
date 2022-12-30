@@ -1,0 +1,20 @@
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:27:43.250Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:27:43.253Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:27:43.253Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gon1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gon1.json.json'","timestamp":"2022-12-30T09:27:43.254Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:27:43.271Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:27:43.273Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:27:43.273Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:30:37.670Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gon1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gon1.json.json'","timestamp":"2022-12-30T09:30:37.673Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:30:37.674Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:30:37.675Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:30:37.691Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:30:37.694Z"}
+{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:30:37.695Z"}
+{"level":"error","timestamp":"2022-12-30T09:37:51.802Z"}
+{"level":"error","timestamp":"2022-12-30T09:37:52.503Z"}
+{"level":"error","timestamp":"2022-12-30T09:37:52.723Z"}
+{"level":"error","timestamp":"2022-12-30T09:37:52.963Z"}
+{"level":"error","timestamp":"2022-12-30T09:37:53.181Z"}
+{"level":"error","message":"index.ts error Error: Failed to get data from ","timestamp":"2022-12-30T09:37:53.181Z"}
