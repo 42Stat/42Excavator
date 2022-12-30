@@ -1,19 +1,19 @@
 import { JSONSchemaType } from "ajv";
 
 export interface UserImageDto {
-  link: string;
+  link?: string;
 }
 
 export interface UserImage {
-  link: string;
+  link?: string;
 }
 
 export const userImageSchema: JSONSchemaType<UserImage> = {
   $id: "userImage",
   type: "object",
   properties: {
-    link: { type: "string" },
+    link: { type: "string", nullable: true },
   },
-  required: ["link"],
+  required: [],
   additionalProperties: true,
 };

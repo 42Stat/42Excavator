@@ -1,20 +1,114 @@
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:27:43.250Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:27:43.253Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:27:43.253Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gon1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gon1.json.json'","timestamp":"2022-12-30T09:27:43.254Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:27:43.271Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:27:43.273Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:27:43.273Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:30:37.670Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gon1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gon1.json.json'","timestamp":"2022-12-30T09:30:37.673Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:30:37.674Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:30:37.675Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gam1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gam1.json.json'","timestamp":"2022-12-30T09:30:37.691Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/gun1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/gun1.json.json'","timestamp":"2022-12-30T09:30:37.694Z"}
-{"level":"error","message":"Failed to get data from /tmp/data/coalitions_users/lee1.json\nError: ENOENT: no such file or directory, open 'data//tmp/data/coalitions_users/lee1.json.json'","timestamp":"2022-12-30T09:30:37.695Z"}
-{"level":"error","timestamp":"2022-12-30T09:37:51.802Z"}
-{"level":"error","timestamp":"2022-12-30T09:37:52.503Z"}
-{"level":"error","timestamp":"2022-12-30T09:37:52.723Z"}
-{"level":"error","timestamp":"2022-12-30T09:37:52.963Z"}
-{"level":"error","timestamp":"2022-12-30T09:37:53.181Z"}
-{"level":"error","message":"index.ts error Error: Failed to get data from ","timestamp":"2022-12-30T09:37:53.181Z"}
+{"level":"error","message":"core.ts: users/117163 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:08:51.400Z"}
+{"level":"error","message":"core.ts: users/117163 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:08:55.563Z"}
+{"level":"error","message":"core.ts: users/117163 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:08:56.055Z"}
+{"level":"error","message":"core.ts: users/117163 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:08:56.565Z"}
+{"level":"error","message":"core.ts: users/117163 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:08:57.091Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:08:57.214Z"}
+{"level":"error","message":"core.ts: users/68582 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:17:18.769Z"}
+{"level":"error","message":"core.ts: users/68582 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:17:23.482Z"}
+{"level":"error","message":"core.ts: users/68582 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:17:23.987Z"}
+{"level":"error","message":"core.ts: users/68582 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:17:24.494Z"}
+{"level":"error","message":"core.ts: users/68582 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:17:25.014Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:17:25.149Z"}
+{"level":"error","message":"core.ts: users/135697 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:17:58.457Z"}
+{"level":"error","message":"core.ts: users/131818 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:00.076Z"}
+{"level":"error","message":"core.ts: users/135466 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:01.711Z"}
+{"level":"error","message":"core.ts: users/135641 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:02.735Z"}
+{"level":"error","message":"core.ts: users/135583 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:03.759Z"}
+{"level":"error","message":"core.ts: users/135391 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:04.787Z"}
+{"level":"error","message":"core.ts: users/131700 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:05.852Z"}
+{"level":"error","message":"core.ts: users/135497 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:06.921Z"}
+{"level":"error","message":"core.ts: users/131570 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:07.947Z"}
+{"level":"error","message":"core.ts: users/135697 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:08.976Z"}
+{"level":"error","message":"core.ts: users/131818 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:09.999Z"}
+{"level":"error","message":"core.ts: users/135466 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:11.025Z"}
+{"level":"error","message":"core.ts: users/135641 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:12.049Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:18:12.050Z"}
+{"level":"error","message":"core.ts: users/131650 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:13.087Z"}
+{"level":"error","message":"core.ts: users/131781 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:14.152Z"}
+{"level":"error","message":"core.ts: users/135619 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:15.218Z"}
+{"level":"error","message":"core.ts: users/135648 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:16.304Z"}
+{"level":"error","message":"core.ts: users/131800 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:17.369Z"}
+{"level":"error","message":"core.ts: users/135443 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:18.394Z"}
+{"level":"error","message":"core.ts: users/135389 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:19.426Z"}
+{"level":"error","message":"core.ts: users/131712 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:20.453Z"}
+{"level":"error","message":"core.ts: users/131646 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:21.481Z"}
+{"level":"error","message":"core.ts: users/131690 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:22.505Z"}
+{"level":"error","message":"core.ts: users/131650 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:23.528Z"}
+{"level":"error","message":"core.ts: users/131781 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:24.554Z"}
+{"level":"error","message":"core.ts: users/135619 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:25.590Z"}
+{"level":"error","message":"core.ts: users/135648 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:26.646Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:18:26.646Z"}
+{"level":"error","message":"core.ts: users/135525 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:27.722Z"}
+{"level":"error","message":"core.ts: users/135705 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:28.748Z"}
+{"level":"error","message":"core.ts: users/135576 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:29.774Z"}
+{"level":"error","message":"core.ts: users/131786 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:30.856Z"}
+{"level":"error","message":"core.ts: users/131722 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:31.880Z"}
+{"level":"error","message":"core.ts: users/135628 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:32.911Z"}
+{"level":"error","message":"core.ts: users/131542 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:33.968Z"}
+{"level":"error","message":"core.ts: users/131568 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:35.028Z"}
+{"level":"error","message":"core.ts: users/135783 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:36.032Z"}
+{"level":"error","message":"core.ts: users/135523 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:37.060Z"}
+{"level":"error","message":"core.ts: users/135525 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:38.156Z"}
+{"level":"error","message":"core.ts: users/135705 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:39.237Z"}
+{"level":"error","message":"core.ts: users/135576 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:40.259Z"}
+{"level":"error","message":"core.ts: users/131786 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:41.292Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:18:41.292Z"}
+{"level":"error","message":"core.ts: users/135534 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:42.330Z"}
+{"level":"error","message":"core.ts: users/135557 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:43.370Z"}
+{"level":"error","message":"core.ts: users/131841 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:44.400Z"}
+{"level":"error","message":"core.ts: users/131527 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:45.422Z"}
+{"level":"error","message":"core.ts: users/131694 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:46.456Z"}
+{"level":"error","message":"core.ts: users/131784 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:47.487Z"}
+{"level":"error","message":"core.ts: users/131801 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:48.513Z"}
+{"level":"error","message":"core.ts: users/135521 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:49.542Z"}
+{"level":"error","message":"core.ts: users/131615 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:50.568Z"}
+{"level":"error","message":"core.ts: users/135431 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:51.639Z"}
+{"level":"error","message":"core.ts: users/135534 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:52.668Z"}
+{"level":"error","message":"core.ts: users/135557 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:53.696Z"}
+{"level":"error","message":"core.ts: users/131841 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:54.719Z"}
+{"level":"error","message":"core.ts: users/131527 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:55.846Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:18:55.846Z"}
+{"level":"error","message":"core.ts: users/131648 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:56.974Z"}
+{"level":"error","message":"core.ts: users/135489 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:58.207Z"}
+{"level":"error","message":"core.ts: users/135658 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:18:59.326Z"}
+{"level":"error","message":"core.ts: users/131824 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:00.348Z"}
+{"level":"error","message":"core.ts: users/131611 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:01.378Z"}
+{"level":"error","message":"core.ts: users/131590 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:02.439Z"}
+{"level":"error","message":"core.ts: users/112229 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:03.464Z"}
+{"level":"error","message":"core.ts: users/110831 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:04.488Z"}
+{"level":"error","message":"core.ts: users/110806 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:05.495Z"}
+{"level":"error","message":"core.ts: users/112029 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:06.526Z"}
+{"level":"error","message":"core.ts: users/131648 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:07.558Z"}
+{"level":"error","message":"core.ts: users/135489 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:08.625Z"}
+{"level":"error","message":"core.ts: users/135658 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:09.656Z"}
+{"level":"error","message":"core.ts: users/131824 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:10.679Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:19:10.679Z"}
+{"level":"error","message":"core.ts: users/110798 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:11.711Z"}
+{"level":"error","message":"core.ts: users/110834 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:12.739Z"}
+{"level":"error","message":"core.ts: users/110825 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:13.772Z"}
+{"level":"error","message":"core.ts: users/110881 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:14.811Z"}
+{"level":"error","message":"core.ts: users/112196 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:15.852Z"}
+{"level":"error","message":"core.ts: users/110820 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:16.926Z"}
+{"level":"error","message":"core.ts: users/110815 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:17.953Z"}
+{"level":"error","message":"core.ts: users/110933 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:19.078Z"}
+{"level":"error","message":"core.ts: users/110830 Error: sendApiRequest: Error: sendApiRequest: Error: 429 Too Many Requests","timestamp":"2022-12-30T16:19:20.101Z"}
+{"level":"error","message":"Request for a hour is over","timestamp":"2022-12-30T16:38:20.523Z"}
+{"level":"error","message":"core.ts: users/67026 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:43:15.510Z"}
+{"level":"error","message":"core.ts: users/67026 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:43:20.087Z"}
+{"level":"error","message":"core.ts: users/67026 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:43:20.587Z"}
+{"level":"error","message":"core.ts: users/67026 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:43:21.096Z"}
+{"level":"error","message":"core.ts: users/67026 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:43:21.634Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:43:21.713Z"}
+{"level":"error","message":"core.ts: users/66855 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:25.958Z"}
+{"level":"error","message":"core.ts: users/66855 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:29.049Z"}
+{"level":"error","message":"core.ts: users/66855 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:29.541Z"}
+{"level":"error","message":"core.ts: users/66855 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:30.067Z"}
+{"level":"error","message":"core.ts: users/66855 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:30.567Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:51:30.637Z"}
+{"level":"error","message":"core.ts: users/67127 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:32.689Z"}
+{"level":"error","message":"core.ts: users/67127 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:33.173Z"}
+{"level":"error","message":"core.ts: users/67127 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:33.680Z"}
+{"level":"error","message":"core.ts: users/67127 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:34.222Z"}
+{"level":"error","message":"core.ts: users/67127 Error: Invalid data\nusers/\n[{\"instancePath\":\"/pool_month\",\"schemaPath\":\"#/properties/pool_month/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-30T16:51:34.787Z"}
+{"level":"error","message":"user.ts: Error: Failed to get data from  of users/","timestamp":"2022-12-30T16:51:34.787Z"}

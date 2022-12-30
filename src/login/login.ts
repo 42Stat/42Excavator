@@ -4,13 +4,19 @@ import { exit } from "process";
 
 dotenv.config();
 
-const clientId: string = process.env.CLIENT_ID as string;
-const secret: string = process.env.SECRET as string;
+// const clientId: string = process.env.CLIENT_ID as string;
+// const secret: string = process.env.SECRET as string;
+// const spareClientId: string = process.env.SEC_CLIENT_ID as string;
+// const spareSecret: string = process.env.SEC_SECRET as string;
 const loginUrl: string = "https://api.intra.42.fr/oauth/token";
 export let accessToken: string = "";
 
-export let getAccessToken = async (): Promise<string | null> => {
+export let getAccessToken = async (
+  isSpare: boolean = false
+): Promise<string | null> => {
   // try to get Access Token 3 times
+  const clientId = isSpare ? process.env.SEC_CLIENT_ID : process.env.CLIENT_ID;
+  const secret = isSpare ? process.env.SEC_SECRET : process.env.SECRET;
   if (clientId === undefined || secret === undefined) {
     console.error("[Error] No clientId or secret");
     exit();

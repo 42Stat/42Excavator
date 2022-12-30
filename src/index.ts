@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 import { getAccessToken } from "./login/login";
 import { getData, getDataLoop, sendApiRequest } from "./api/core";
 import * as readline from "readline";
-import { getAllUsers, } from "./api/user";
+import { getAllUsers } from "./api/user";
 import * as winston from "winston";
 
 // winston error level logger include timestamp
@@ -39,9 +39,9 @@ let rl = readline.createInterface({
 main();
 
 async function main() {
-  getAllUsers();
-  rl.setPrompt("Homi > ");
   await getAccessToken();
+  await getAllUsers();
+  rl.setPrompt("Homi > ");
   console.log("42Homi's ready :)");
   rl.on("line", async (line) => {
     rl.prompt();
