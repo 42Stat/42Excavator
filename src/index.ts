@@ -42,7 +42,7 @@ main();
 async function main() {
   await getAccessToken();
   // await getAllUsers();
-  await getProjectsUsers();
+  // await getProjectsUsers();
   rl.setPrompt("Homi > ");
   console.log("42Homi's ready :)");
   rl.on("line", async (line) => {

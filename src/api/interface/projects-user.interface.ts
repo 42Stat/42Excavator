@@ -45,7 +45,7 @@ export interface TeamDto {
   closed_at?: string;
 }
 
-const teamSchema: JSONSchemaType<TeamDto> = {
+export const teamSchema: JSONSchemaType<TeamDto> = {
   type: "object",
   properties: {
     id: { type: "number" },

@@ -5448,3 +5448,240 @@
 {"level":"info","message":"Received Sucessfully: projects/1337/projects_users?filter[campus]=29&page[size]=100&page[number]=2","timestamp":"2022-12-31T13:12:01.982Z"}
 {"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T13:12:02.283Z"}
 {"level":"info","message":"Received Sucessfully: projects/1337/projects_users?filter[campus]=29&page[size]=100&page[number]=3","timestamp":"2022-12-31T13:12:02.283Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:11.805Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=1","timestamp":"2022-12-31T14:14:11.807Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:16.835Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=2","timestamp":"2022-12-31T14:14:16.835Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:22.164Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=3","timestamp":"2022-12-31T14:14:22.165Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:26.898Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=4","timestamp":"2022-12-31T14:14:26.899Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:32.088Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:14:32.088Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/comment\",\"schemaPath\":\"#/properties/comment/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-31T14:14:32.318Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:37.271Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=6","timestamp":"2022-12-31T14:14:37.271Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:42.971Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=7","timestamp":"2022-12-31T14:14:42.971Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:48.214Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=8","timestamp":"2022-12-31T14:14:48.214Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:53.609Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=9","timestamp":"2022-12-31T14:14:53.609Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:14:59.127Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=10","timestamp":"2022-12-31T14:14:59.128Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:15:04.358Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:15:04.358Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/comment\",\"schemaPath\":\"#/properties/comment/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-31T14:15:04.598Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:15:09.642Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:15:09.642Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/comment\",\"schemaPath\":\"#/properties/comment/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-31T14:15:09.872Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:15:14.445Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:15:14.446Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/comment\",\"schemaPath\":\"#/properties/comment/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-31T14:15:14.675Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:15:19.581Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:15:19.581Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/comment\",\"schemaPath\":\"#/properties/comment/type\",\"keyword\":\"type\",\"params\":{\"type\":\"string\"},\"message\":\"must be string\"}]","timestamp":"2022-12-31T14:15:19.813Z"}
+{"level":"error","message":"index.ts error Error: getDataLoop: Error: Failed to get data from  of scale_teams?filter[campus_id]=29&page[size]=100&page[number]=","timestamp":"2022-12-31T14:15:19.813Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:16.129Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=1","timestamp":"2022-12-31T14:17:16.132Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:20.850Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=2","timestamp":"2022-12-31T14:17:20.850Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:25.482Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=3","timestamp":"2022-12-31T14:17:25.483Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:30.169Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=4","timestamp":"2022-12-31T14:17:30.170Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:34.917Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=5","timestamp":"2022-12-31T14:17:34.917Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:39.803Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=6","timestamp":"2022-12-31T14:17:39.803Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:44.489Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=7","timestamp":"2022-12-31T14:17:44.490Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:49.165Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=8","timestamp":"2022-12-31T14:17:49.165Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:53.792Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=9","timestamp":"2022-12-31T14:17:53.793Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:17:58.415Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=10","timestamp":"2022-12-31T14:17:58.415Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:03.608Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=11","timestamp":"2022-12-31T14:18:03.609Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:08.769Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=12","timestamp":"2022-12-31T14:18:08.770Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:13.869Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=13","timestamp":"2022-12-31T14:18:13.870Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:18.901Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=14","timestamp":"2022-12-31T14:18:18.901Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:24.019Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=15","timestamp":"2022-12-31T14:18:24.019Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:29.017Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=16","timestamp":"2022-12-31T14:18:29.017Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:34.150Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=17","timestamp":"2022-12-31T14:18:34.150Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:39.229Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=18","timestamp":"2022-12-31T14:18:39.230Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:44.223Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=19","timestamp":"2022-12-31T14:18:44.223Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:49.290Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=20","timestamp":"2022-12-31T14:18:49.290Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:54.346Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=21","timestamp":"2022-12-31T14:18:54.347Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:18:59.203Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=22","timestamp":"2022-12-31T14:18:59.203Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:04.159Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=23","timestamp":"2022-12-31T14:19:04.159Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:09.451Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=24","timestamp":"2022-12-31T14:19:09.451Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:14.571Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=25","timestamp":"2022-12-31T14:19:14.571Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:19.808Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=26","timestamp":"2022-12-31T14:19:19.808Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:24.733Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=27","timestamp":"2022-12-31T14:19:24.733Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:29.651Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=28","timestamp":"2022-12-31T14:19:29.651Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:34.775Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=29","timestamp":"2022-12-31T14:19:34.775Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:39.881Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=30","timestamp":"2022-12-31T14:19:39.881Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:45.001Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=31","timestamp":"2022-12-31T14:19:45.001Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:49.968Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=32","timestamp":"2022-12-31T14:19:49.968Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:54.922Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=33","timestamp":"2022-12-31T14:19:54.922Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:19:59.892Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=34","timestamp":"2022-12-31T14:19:59.892Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:04.985Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=35","timestamp":"2022-12-31T14:20:04.985Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:10.085Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=36","timestamp":"2022-12-31T14:20:10.086Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:15.276Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=37","timestamp":"2022-12-31T14:20:15.276Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:20.461Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=38","timestamp":"2022-12-31T14:20:20.461Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:25.813Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=39","timestamp":"2022-12-31T14:20:25.814Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:31.267Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=40","timestamp":"2022-12-31T14:20:31.267Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:36.505Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=41","timestamp":"2022-12-31T14:20:36.505Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:41.600Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=42","timestamp":"2022-12-31T14:20:41.601Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:46.599Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=43","timestamp":"2022-12-31T14:20:46.600Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:52.079Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=44","timestamp":"2022-12-31T14:20:52.079Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:20:57.162Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=45","timestamp":"2022-12-31T14:20:57.162Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:02.104Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=46","timestamp":"2022-12-31T14:21:02.105Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:07.200Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=47","timestamp":"2022-12-31T14:21:07.200Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:12.127Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=48","timestamp":"2022-12-31T14:21:12.128Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:17.120Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=49","timestamp":"2022-12-31T14:21:17.120Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:22.102Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=50","timestamp":"2022-12-31T14:21:22.103Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:27.145Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=51","timestamp":"2022-12-31T14:21:27.145Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:32.221Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=52","timestamp":"2022-12-31T14:21:32.222Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:37.321Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=53","timestamp":"2022-12-31T14:21:37.321Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:42.696Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=54","timestamp":"2022-12-31T14:21:42.696Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:47.709Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=55","timestamp":"2022-12-31T14:21:47.710Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:52.735Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=56","timestamp":"2022-12-31T14:21:52.735Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:21:57.929Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=57","timestamp":"2022-12-31T14:21:57.929Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:02.902Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=58","timestamp":"2022-12-31T14:22:02.903Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:07.853Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=59","timestamp":"2022-12-31T14:22:07.853Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:12.954Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=60","timestamp":"2022-12-31T14:22:12.955Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:18.143Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=61","timestamp":"2022-12-31T14:22:18.143Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:23.105Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=62","timestamp":"2022-12-31T14:22:23.105Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:28.223Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=63","timestamp":"2022-12-31T14:22:28.224Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:33.400Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=64","timestamp":"2022-12-31T14:22:33.400Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:38.774Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=65","timestamp":"2022-12-31T14:22:38.774Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:43.820Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=66","timestamp":"2022-12-31T14:22:43.820Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:49.048Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=67","timestamp":"2022-12-31T14:22:49.048Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:54.241Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=68","timestamp":"2022-12-31T14:22:54.241Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:22:59.585Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=69","timestamp":"2022-12-31T14:22:59.585Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:04.910Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=70","timestamp":"2022-12-31T14:23:04.910Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:10.430Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=71","timestamp":"2022-12-31T14:23:10.430Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:15.841Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=72","timestamp":"2022-12-31T14:23:15.842Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:21.169Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:23:21.169Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:23:21.406Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:26.865Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74","timestamp":"2022-12-31T14:23:26.865Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:23:27.096Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:32.150Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=75","timestamp":"2022-12-31T14:23:32.150Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:37.504Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=76","timestamp":"2022-12-31T14:23:37.504Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:42.627Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=77","timestamp":"2022-12-31T14:23:42.627Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:47.948Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=78","timestamp":"2022-12-31T14:23:47.948Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:53.295Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=79","timestamp":"2022-12-31T14:23:53.296Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:23:58.520Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=80","timestamp":"2022-12-31T14:23:58.520Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:24:03.473Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:24:03.473Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:24:03.702Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:24:08.279Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74","timestamp":"2022-12-31T14:24:08.280Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:24:08.521Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:24:13.115Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:24:13.116Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:24:13.350Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:24:18.062Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74","timestamp":"2022-12-31T14:24:18.062Z"}
+{"level":"error","message":"core.ts: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=74 Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:24:18.294Z"}
+{"level":"error","message":"index.ts error Error: getDataLoop: Error: Failed to get data from  of scale_teams?filter[campus_id]=29&page[size]=100&page[number]=","timestamp":"2022-12-31T14:24:18.294Z"}
+{"level":"info","message":"Response: 404 Not Found","timestamp":"2022-12-31T14:25:31.205Z"}
+{"level":"error","message":"core.ts: Error: sendApiRequest: Error: 404 Not Found","timestamp":"2022-12-31T14:25:31.206Z"}
+{"level":"info","message":"Response: 404 Not Found","timestamp":"2022-12-31T14:25:31.908Z"}
+{"level":"error","message":"core.ts: Error: sendApiRequest: Error: 404 Not Found","timestamp":"2022-12-31T14:25:31.908Z"}
+{"level":"info","message":"Response: 404 Not Found","timestamp":"2022-12-31T14:25:32.126Z"}
+{"level":"error","message":"core.ts: Error: sendApiRequest: Error: 404 Not Found","timestamp":"2022-12-31T14:25:32.126Z"}
+{"level":"info","message":"Response: 404 Not Found","timestamp":"2022-12-31T14:25:32.365Z"}
+{"level":"error","message":"core.ts: Error: sendApiRequest: Error: 404 Not Found","timestamp":"2022-12-31T14:25:32.365Z"}
+{"level":"info","message":"Response: 429 Too Many Requests","timestamp":"2022-12-31T14:25:32.580Z"}
+{"level":"info","message":"Response: 404 Not Found","timestamp":"2022-12-31T14:25:33.292Z"}
+{"level":"error","message":"core.ts: Error: sendApiRequest: Error: sendApiRequest: Error: 404 Not Found","timestamp":"2022-12-31T14:25:33.293Z"}
+{"level":"error","message":"index.ts error Error: Failed to get data from ","timestamp":"2022-12-31T14:25:33.293Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:27:28.665Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:28.666Z"}
+{"level":"error","message":"core.ts: Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=73\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:27:28.906Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:27:33.280Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:33.280Z"}
+{"level":"error","message":"core.ts: Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=73\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:27:33.516Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:27:37.857Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:37.857Z"}
+{"level":"error","message":"core.ts: Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=73\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:27:38.098Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:27:42.604Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:42.604Z"}
+{"level":"error","message":"core.ts: Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=73\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:27:42.833Z"}
+{"level":"info","message":"Response: 200 OK","timestamp":"2022-12-31T14:27:47.346Z"}
+{"level":"info","message":"Received Sucessfully: scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:47.346Z"}
+{"level":"error","message":"core.ts: Error: Invalid data\nscale_teams?filter[campus_id]=29&page[size]=100&page[number]=73\n[{\"instancePath\":\"/feedbacks/0/user\",\"schemaPath\":\"#/properties/feedbacks/items/properties/user/type\",\"keyword\":\"type\",\"params\":{\"type\":\"object\"},\"message\":\"must be object\"}]","timestamp":"2022-12-31T14:27:47.574Z"}
+{"level":"error","message":"index.ts error Error: Failed to get data from scale_teams?filter[campus_id]=29&page[size]=100&page[number]=73","timestamp":"2022-12-31T14:27:47.574Z"}
