@@ -22,24 +22,24 @@ export interface SimpleUserDto {
   active?: boolean;
 }
 
-export interface SimpleUser {
-  id: number;
-  email: string;
-  login: string;
-  firstName: string;
-  lastName: string;
-  displayname: string;
-  kind: string;
-  image: UserImage;
-  staff?: boolean;
-  correctionPoint: number;
-  wallet: number;
-  alumni?: boolean;
-  active?: boolean;
-}
+// export interface SimpleUser {
+//   id: number;
+//   email: string;
+//   login: string;
+//   firstName: string;
+//   lastName: string;
+//   displayname: string;
+//   kind: string;
+//   image: UserImage;
+//   staff?: boolean;
+//   correctionPoint: number;
+//   wallet: number;
+//   alumni?: boolean;
+//   active?: boolean;
+// }
 
 export const simpleUserSchema: JSONSchemaType<SimpleUserDto> = {
-  $id: "simpleUser",
+  // $id: "simpleUser",
   type: "object",
   properties: {
     id: { type: "number" },

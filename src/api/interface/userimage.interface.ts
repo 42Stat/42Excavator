@@ -9,7 +9,7 @@ export interface UserImage {
 }
 
 export const userImageSchema: JSONSchemaType<UserImage> = {
-  $id: "userImage",
+  // $id: "userImage",
   type: "object",
   properties: {
     link: { type: "string", nullable: true },

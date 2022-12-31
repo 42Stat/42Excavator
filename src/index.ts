@@ -7,6 +7,7 @@ import { getData, getDataLoop, sendApiRequest } from "./api/core";
 import * as readline from "readline";
 import { getAllUsers } from "./api/user";
 import * as winston from "winston";
+import { getProjectsUsers } from "./api/projects-user";
 
 // winston error level logger include timestamp
 export const logger = winston.createLogger({
@@ -40,7 +41,8 @@ main();
 
 async function main() {
   await getAccessToken();
-  await getAllUsers();
+  // await getAllUsers();
+  await getProjectsUsers();
   rl.setPrompt("Homi > ");
   console.log("42Homi's ready :)");
   rl.on("line", async (line) => {

@@ -3,6 +3,7 @@ export const ajv = new Ajv();
 import { getAccessToken, accessToken } from "../login/login";
 import { validateUser } from "./interface/user.interface";
 import { validateCoalitionUser } from "./interface/coalitions-user.interface";
+import { validateProjectsUser } from "./interface/projects-user.interface";
 import { logger } from "../index";
 import * as fs from "fs";
 import * as fsPromises from "fs/promises";
@@ -53,6 +54,8 @@ export const getValidator = (resource: string): ValidateFunction => {
       return validateUser;
     case "coalitions":
       return validateCoalitionUser;
+    case "projects":
+      return validateProjectsUser;
     default:
       throw new Error("No validator for this resource");
   }
@@ -167,7 +170,7 @@ export const getDataLoop = async (
     console.log(callCount);
     try {
       data = await getMultipleData(
-        resource + `?page[size]=${PAGESIZE}&page[number]=`,
+        resource + `?filter[campus]=29&page[size]=${PAGESIZE}&page[number]=`,
         elements
       );
       if (data && data.length !== 0)

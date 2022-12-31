@@ -1,6 +1,3 @@
-[submodule "data/user"]
-	path = data/user
-	url = https://github.com/42Stat/42Users.git
 [submodule "data"]
 	path = data
 	url = https://github.com/42stat/data
