@@ -50,8 +50,7 @@ export const sendApiRequest = async (
 
 export const getValidator = (resource: string): ValidateFunction => {
   let api = resource.split("/")[0];
-  if (api.includes("scale_teams"))
-    api = "scale_teams"
+  if (api.includes("scale_teams")) api = "scale_teams";
   switch (api) {
     case "users":
       return validateUser;
@@ -175,7 +174,8 @@ export const getDataLoop = async (
     console.log(callCount);
     try {
       data = await getMultipleData(
-        resource + `?filter[campus_id]=29&page[size]=${PAGESIZE}&page[number]=`,
+        resource +
+          `?filter[campus_id]=29&filter[cursus_id]=21&page[size]=${PAGESIZE}&page[number]=`,
         elements
       );
       if (data && data.length !== 0)
