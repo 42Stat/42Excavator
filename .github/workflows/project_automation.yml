@@ -1,10 +1,7 @@
 name: Project automation
 on:
   issues:
-    types: [unassigned, assigned, closed, assigned]
-
   pull_request:
-    types: [opened, reopened, review_requested, closed]
 
 env:
   backlog: 🗃 Backlog
