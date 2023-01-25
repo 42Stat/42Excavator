@@ -1,4 +1,5 @@
 import { JSONSchemaType } from "ajv";
+import { ajv } from "../core";
 
 export interface AchievementDto {
   id: number;
@@ -36,3 +37,5 @@ export const achievementSchema: JSONSchemaType<AchievementDto> = {
   ],
   additionalProperties: true,
 };
+
+export const validateAchievement = ajv.compile(achievementSchema);
